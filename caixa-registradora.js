@@ -1,7 +1,7 @@
 // =================================================================================
 //
 // Script adicionado em 28/04/2016 por Julio Cesar Luchesi Coelho. Código construído no CODECADEMY (www.codecademy.com)
-// durante o curso de JavaScript, Módulo CRIANDO UMA CAIXA REGISTRADORA, tópico "BIP BIP".
+// durante o curso de JavaScript, Módulo CRIANDO UMA CAIXA REGISTRADORA, último tópico do curso: "Você Merece".
 //
 // VERSÃO desse script: 0.1
 //
@@ -9,7 +9,7 @@
 // Essa é uma caixa registradora que trabalha com Classes, métodos, funcões e propriedades. Ao chamar o metodo "cashRegister.scan"
 // com os dois atributos (nome do item e quantidade), ele faz a soma e adiciona ao total. Depois exibe o total.
 //
-// Há também o metodo "cashRegister.voidLastTransaction" que cancela o valor da última transação.
+// Há também o metodo "cashRegister.voidLastTransaction" que cancela o valor da última transação e o metodo "applyStaffDiscount" para aplicar um desconto sobre o total da última transação feita a um determinado empregado.
 //
 // =================================================================================
 
