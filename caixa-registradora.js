@@ -76,6 +76,9 @@ var cashRegister = {
     //menos o percentual de desconto desse "employee" na segunda linha. 
     applyStaffDiscount: function(employee){
         this.employee = employee;
+        // pega o total atual, multiplica pelo objeto recebido no parâmetro "employee". Nesse caso o objeto recebido
+        // será o "ME". ME tem 2 parâmetros, "name = Julio" e "discountPercent = 20". Para chamar o SEGUNDO parâmetro 
+        // apenas, utiliza-se "employee.discountPercent." ou seja, o número 20.
         this.total -= this.total * (employee.discountPercent / 100);
     }
 };
