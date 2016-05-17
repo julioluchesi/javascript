@@ -1,19 +1,25 @@
-// =================================================================================
-//
-// Script adicionado em 28/04/2016 por Julio Cesar Luchesi Coelho. Código construído no CODECADEMY (www.codecademy.com)
-// durante o curso de JavaScript, Módulo CRIANDO UMA CAIXA REGISTRADORA, último tópico do curso: "Você Merece".
-//
-// VERSÃO desse script: 0.1
-//
-// DESCRIÇÃO:
-// Essa é uma caixa registradora que trabalha com Classes, métodos, funcões e propriedades. Ao chamar o metodo "cashRegister.scan"
-// com os dois atributos (nome do item e quantidade), ele faz a soma e adiciona ao total. Depois exibe o total.
-//
-// Há também o metodo "cashRegister.voidLastTransaction" que cancela o valor da última transação e o metodo "applyStaffDiscount" para aplicar um desconto sobre o total da última transação feita a um determinado empregado.
-//
-// =================================================================================
+/* =================================================================================
 
-// Definindo função construtora "StaffMember" que recebe dois parâmetros: "name" e "discountPercent". Essas são as propriedades que o objeto criado com esse construtor vai ter.
+ Script adicionado em 28/04/2016 por Julio Cesar Luchesi Coelho. Código construído 
+no CODECADEMY (www.codecademy.com)
+ durante o curso de JavaScript, Módulo CRIANDO UMA CAIXA REGISTRADORA, último tópico 
+ do curso: "Você Merece".
+
+ VERSÃO desse script: 0.1
+
+ DESCRIÇÃO:
+ Essa é uma caixa registradora que trabalha com Classes, métodos, funcões e propriedades. 
+ Ao chamar o metodo "cashRegister.scan" com os dois atributos (nome do item e quantidade), 
+ ele faz a soma e adiciona ao total. Depois exibe o total.
+
+ Há também o metodo "cashRegister.voidLastTransaction" que cancela o valor da última 
+ transação e o metodo "applyStaffDiscount" para aplicar um desconto sobre o total da 
+ última transação feita a um determinado empregado.
+
+ =================================================================================*/
+
+// Definindo função construtora "StaffMember" que recebe dois parâmetros: "name" e "discountPercent". 
+//Essas são as propriedades que o objeto criado com esse construtor vai ter.
 function StaffMember(name,discountPercent){
     this.name = name;
     this.discountPercent = discountPercent;
@@ -33,16 +39,21 @@ var cashRegister = {
     // Iniciando a propriedade "lastTransactionAmount"
     lastTransactionAmount: 0,
 
-    //Definindo propriedade "add" que recebe um atributo "itemCost" e/ou 0, e soma ao total. Depois grava esse atributo na propriedade "lastTransactionAmount". A propriedade "lastTransactionAmount" guarda o valor da última transação, caso seja necessário desfazer essa transação por motivo de erro de quem a fez por exemplo.
+    //Definindo propriedade "add" que recebe um atributo "itemCost" e/ou 0, e soma ao total. 
+    //Depois grava esse atributo na propriedade "lastTransactionAmount". A propriedade "lastTransactionAmount" 
+    //guarda o valor da última transação, caso seja necessário desfazer essa transação por motivo de erro de 
+    //quem a fez por exemplo.
     add: function(itemCost) {
         this.total +=  (itemCost || 0);
         this.lastTransactionAmount = itemCost;
     },
     
-    //Definindo o metodo "scan" que recebe 2 atributos "item" e "quantity". O primeiro atributo carrega o nome do produto e o segundo a quantidade desse produto.
+    //Definindo o metodo "scan" que recebe 2 atributos "item" e "quantity". O primeiro atributo carrega 
+    //o nome do produto e o segundo a quantidade desse produto.
     scan: function(item,quantity) {
 
-        // Definindo a expressão seletora SWITCH que trata o atributo 1 do metodo "scan". O segundo atributo "quantity" é utilizado dentro dos cases.
+        // Definindo a expressão seletora SWITCH que trata o atributo 1 do metodo "scan". O segundo atributo 
+        //"quantity" é utilizado dentro dos cases.
         switch (item) {
             case "ovos": this.add(0.98 * quantity); break;
             case "leite": this.add(1.23 * quantity); break;
@@ -53,13 +64,16 @@ var cashRegister = {
             return true;
     },
 
-    //Definindo metodo "voidLastTransaction" para desfazer a última transação. Ele apenas subtrai do o valor da última transação e atribui o novo valor que a propriedade "lastTransactionAMount" carrega a esse total (-=). Depois na segunda linha zeramos a propriedade "las"
+    //Definindo metodo "voidLastTransaction" para desfazer a última transação. Ele apenas subtrai do o valor da 
+    //última transação e atribui o novo valor que a propriedade "lastTransactionAMount" carrega a esse total (-=). 
+    //Depois na segunda linha zeramos a propriedade "las"
      voidLastTransaction: function() {
         return this.total -= this.lastTransactionAmount;
         this.lastTransactionAmount = 0;
     }
     
-    // Definindo metodo "applyStaffDiscount" que recebe um parâmetro "employee" e usa ele para calcular o total menos o percentual de desconto desse "employee" na segunda linha. 
+    // Definindo metodo "applyStaffDiscount" que recebe um parâmetro "employee" e usa ele para calcular o total 
+    //menos o percentual de desconto desse "employee" na segunda linha. 
     applyStaffDiscount: function(employee){
         this.employee = employee;
         this.total -= this.total * (employee.discountPercent / 100);
