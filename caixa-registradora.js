@@ -66,7 +66,7 @@ var cashRegister = {
 
     //Definindo metodo "voidLastTransaction" para desfazer a última transação. Ele apenas subtrai do o valor da 
     //última transação e atribui o novo valor que a propriedade "lastTransactionAMount" carrega a esse total (-=). 
-    //Depois na segunda linha zeramos a propriedade "las"
+    //Depois na segunda linha zeramos a propriedade "lastTransactionAmount"
      voidLastTransaction: function() {
         return this.total -= this.lastTransactionAmount;
         this.lastTransactionAmount = 0;
