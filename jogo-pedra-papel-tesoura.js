@@ -8,9 +8,6 @@
   // Variável Computador
   var computerChoice = Math.random();
 
-//Checando os dados do usuario (a função checaDados é definida mais abaixo)
-  checaDados(userChoice);
-
 // Atribuindo um nome (string) à variável (number) eleita pelo computador
   if (computerChoice < 0.34) {
     computerChoice = "pedra";
@@ -18,11 +15,14 @@
     computerChoice = "papel";
   } else {
     computerChoice = "tesoura";
-  }
+  };
+
+//Checando os dados do usuario e da máquina (a função checaDados é definida mais abaixo)
+  checaDados(userChoice);
 
 // FUNÇÕES //
 
-//função para checar dados do usuário
+//função para checar e informar os dados do usuário
   var checaDados = function(dados){
     if(dados === "pedra" || dados === "tesoura" || dados === "papel"){
         console.log("O computador escolheu:" + " " + computerChoice);
