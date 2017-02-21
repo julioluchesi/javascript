@@ -2,6 +2,8 @@
 // Esta versão do jogo contém o filtro para que o jogador não digite nada que seja diferente de PEDRA PAPEL ou TESOURA.
 // Se o jogador digitar algo diferente, o jogo orienta sobre o procedimento correto.
 
+// Próxima versão: O resultado do jogo indicará especificamente se o jogador ou o computador ganhou. 
+
 //Declarando variáveis
   // Variável usuário
   var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?").toLowerCase();
