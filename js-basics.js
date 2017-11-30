@@ -1,7 +1,7 @@
 //created in NOV 2017
 
 //**********************************************************************//
-//  			 VARIABLES AND DATA TYPES / VARIÁVEIS E TIPO DE DADOS         //
+//          VARIABLES AND DATA TYPES / VARIÁVEIS E TIPO DE DADOS        //
 //**********************************************************************//
 
 var name = 'Julio'; //string
@@ -35,7 +35,7 @@ var lastName = prompt('What is the last name?');
 alert(name + ' is a ' + age + ' years old ' + job + '. Is he married? ' + isMarried + '.')
 
 //**********************************************************************//
-//       	          		 OPERATORS / OPERADORES                         //
+//               OPERATORS / OPERADORES                                 //
 //**********************************************************************//
 
 // Regra de precedência dos operadores (What is Parsed first? O que é analisado primeiro?): 
@@ -61,7 +61,7 @@ console.log(ageJulio);
 console.log(ageTomas);
 
 //**********************************************************************//
-//       	          		 IF/ELSE (condicionais)                         //
+//            IF/ELSE (condicionais)                                    //
 //**********************************************************************//
 
 
