@@ -1,5 +1,5 @@
-# javascript-testing
+# javascript
 
-Este diretório contém arquivos de teste, produzidos durante a realização do curso de Javascript no CODECADEMY (www.codecademy.com) entre Outubro/2015 e Abril/2016.
+Este diretório contém arquivos de estudo e testes.
 
 Julio C L Coelho
